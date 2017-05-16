@@ -36,22 +36,3 @@ const lettersAnimation = () => {
 };
 
 lettersAnimation();
-
-// document.querySelectorAll('.words > span').forEach((word, i) => {
-//   let letters = word.querySelectorAll('i');
-//   setTimeout(function () {
-//   }, i * (letters.length - 1) * 100);
-// });
-
-// for (let i = 0; i < words.length; i++) {
-//   let word = words[i];
-// }
-
-// for (let i = 0; i < is.length; i++) {
-//   let el = is[i];
-//   words[0].classList.remove('hidden');
-//   setTimeout(() => {
-//     el.classList.remove('out');
-//     el.classList.add('in');
-//   }, i * 100);
-// }
