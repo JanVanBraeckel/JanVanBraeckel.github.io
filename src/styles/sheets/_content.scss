@@ -1,0 +1,36 @@
+.landing {
+  height: 100vh;
+  text-align: center;
+  width: 100%;
+  min-height: 400px;
+
+  .words {
+    position: relative;
+
+    .hidden {
+      visibility: hidden;
+      position: absolute;
+      left: 0;
+      top: 0;
+      i {
+        position: absolute;
+      }
+    }
+
+    i {
+      font-style: normal;
+      display: inline-block;
+      &.out {
+        visibility: hidden;
+      }
+
+      &.in {
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.social {
+  height: 300px;
+}

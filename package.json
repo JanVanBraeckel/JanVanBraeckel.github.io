@@ -1,0 +1,28 @@
+{
+  "name": "janvanbraeckel",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "concurrently \"lite-server\" \"gulp watch\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JanVanBraeckel/JanVanBraeckel.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JanVanBraeckel/JanVanBraeckel.github.io/issues"
+  },
+  "homepage": "https://github.com/JanVanBraeckel/JanVanBraeckel.github.io#readme",
+  "devDependencies": {
+    "concurrently": "3.4.0",
+    "gulp": "3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-csso": "^3.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-typescript": "^3.1.6",
+    "lite-server": "2.3.0",
+    "typescript": "^2.3.2"
+  }
+}
