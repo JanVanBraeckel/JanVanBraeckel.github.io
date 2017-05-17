@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "concurrently \"lite-server\" \"gulp watch\""
+    "build": "webpack",
+    "start": "webpack-dev-server"
   },
+  "pre-commit": [
+    "build"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JanVanBraeckel/JanVanBraeckel.github.io.git"
@@ -17,12 +21,16 @@
   "homepage": "https://github.com/JanVanBraeckel/JanVanBraeckel.github.io#readme",
   "devDependencies": {
     "concurrently": "3.4.0",
-    "gulp": "3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-csso": "^3.0.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-typescript": "^3.1.6",
-    "lite-server": "2.3.0",
-    "typescript": "^2.3.2"
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.28.1",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.11.1",
+    "html-webpack-plugin": "^2.28.0",
+    "sass-loader": "^6.0.5",
+    "ts-loader": "^2.0.3",
+    "typescript": "2.3.2",
+    "url-loader": "^0.5.8",
+    "webpack": "2.5.1",
+    "webpack-dev-server": "2.4.5"
   }
 }
