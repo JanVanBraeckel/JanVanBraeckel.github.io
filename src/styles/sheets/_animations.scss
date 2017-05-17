@@ -1,0 +1,16 @@
+@keyframes cd-pulse {
+  0% {
+    transform: translateY(-50%) scale(1);
+    opacity: 1;
+  }
+
+  40% {
+    transform: translateY(-50%) scale(0.9);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(-50%) scale(0);
+    opacity: 0;
+  }
+}

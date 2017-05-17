@@ -1,0 +1,41 @@
+.whoami {
+  margin: 0 50px;
+  overflow: hidden;
+
+  h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 5rem;
+  }
+
+  .content {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+
+    p {
+      margin: 10px 0;
+    }
+
+    .left,
+    .right {
+      float: left;
+    }
+
+    .left {
+      display: inline-block;
+      width: 25%;
+
+      img {
+        max-width: 50%;
+      }
+    }
+
+    .right {
+      width: 75%;
+      margin-top: 15px;
+      display: inline-block;
+      text-align: left;
+    }
+  }
+}
