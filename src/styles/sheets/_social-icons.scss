@@ -16,15 +16,22 @@ $accent: darken($iconColor, 20%);
     display: inline-block;
     margin: .15rem;
     position: relative;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
+    @media screen and (min-width: 480px) {
+      font-size: 1.6rem;
+    }
   }
 
   i {
     color: $primary;
     position: absolute;
-    top: 19px;
-    left: 19px;
     transition: all $timing ease-out;
+    top: 6px;
+    left: 6px;
+    @media screen and (min-width: 480px) {
+      top: 19px;
+      left: 19px;
+    }
   }
 
   a {
@@ -32,13 +39,17 @@ $accent: darken($iconColor, 20%);
 
     &:before {
       @include transformScale();
-      content: " ";
-      width: 60px;
-      height: 60px;
+      content: '';
       border-radius: 100%;
       display: block;
       background: linear-gradient(45deg, $iconColor, $accent);
       transition: all $timing ease-out;
+      width: 30px;
+      height: 30px;
+      @media screen and (min-width: 480px) {
+        width: 60px;
+        height: 60px;
+      }
     }
 
     &:hover:before {

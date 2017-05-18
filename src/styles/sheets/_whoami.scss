@@ -1,36 +1,105 @@
 .whoami {
   overflow: hidden;
   background-color: #ffffff;
-  padding: 0 50px 20px;
+  padding: 0 10px 20px;
+  @media screen and (min-width: 480px) {
+    padding: 0 50px 20px;
+  }
 
   .content {
     width: 100%;
     overflow: hidden;
     text-align: center;
+    position: relative;
+
+    h1 {
+      margin-bottom: 10px;
+    }
 
     p {
       margin: 10px 0;
     }
 
-    .left,
     .right {
-      float: left;
-    }
-
-    .left {
       display: inline-block;
-      width: 25%;
+      @media screen and (min-width: 600px) {
+        padding-left: 20px;
+      }
 
       img {
-        max-width: 50%;
+        height: 200px;
+        width: auto;
       }
     }
 
-    .right {
-      width: 75%;
-      margin-top: 15px;
+    .left {
+      vertical-align: top;
       display: inline-block;
       text-align: left;
+      @media screen and (min-width: 600px) {
+        max-width: 325px;
+      }
+      @media screen and (max-width: 599px) {
+        width: 100%;
+      }
+    }
+
+    a {
+      position: relative;
+      display: inline-block;
+      text-decoration: none;
+      -webkit-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out;
+      vertical-align: bottom;
+      margin: 0;
+      color: inherit;
+      color: $primary;
+      font-weight: 700;
+      display: inline-block;
+      overflow: hidden;
+
+      &:before {
+        content: '';
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: $primary;
+        transform: translateX(-100%) translateY(calc(100% - 2px));
+        opacity: 0;
+      }
+
+      &:after {
+        content: '';
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: $primary;
+        transition: transform .8s cubic-bezier(.19,1,.22,1);
+        transform: translateX(100%) translateY(calc(100% - 2px));
+        opacity: 1;
+      }
+
+      &:hover {
+        &:before {
+          transition: transform .7s cubic-bezier(.19,1,.22,1);
+          transform: translateX(0%) translateY(calc(100% - 2px));
+          opacity: 1;
+        }
+
+        &:after {
+          transition: none;
+          transform: translateX(0%) translateY(calc(100% - 2px));
+          opacity: 0;
+        }
+      }
     }
   }
 }

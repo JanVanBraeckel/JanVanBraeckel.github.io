@@ -64,26 +64,37 @@ table {
     display: inline-block;
     margin: .15rem;
     position: relative;
-    font-size: 1.6rem; }
+    font-size: 1.3rem; }
+    @media screen and (min-width: 480px) {
+      .social-icons li {
+        font-size: 1.6rem; } }
   .social-icons i {
     color: #2A3A3F;
     position: absolute;
-    top: 19px;
-    left: 19px;
-    transition: all 200ms ease-out; }
+    transition: all 200ms ease-out;
+    top: 6px;
+    left: 6px; }
+    @media screen and (min-width: 480px) {
+      .social-icons i {
+        top: 19px;
+        left: 19px; } }
   .social-icons a {
     display: inline-block; }
     .social-icons a:before {
       transform: scale(1);
       -ms-transform: scale(1);
       -webkit-transform: scale(1);
-      content: " ";
-      width: 60px;
-      height: 60px;
+      content: '';
       border-radius: 100%;
       display: block;
       background: linear-gradient(45deg, #ffffff, #cccccc);
-      transition: all 200ms ease-out; }
+      transition: all 200ms ease-out;
+      width: 30px;
+      height: 30px; }
+      @media screen and (min-width: 480px) {
+        .social-icons a:before {
+          width: 60px;
+          height: 60px; } }
     .social-icons a:hover:before {
       transform: scale(0);
       transition: all 200ms ease-in; }
@@ -106,8 +117,14 @@ html {
 h1 {
   text-transform: uppercase;
   text-align: center;
-  font-size: 5rem;
-  color: #2A3A3F; }
+  color: #2A3A3F;
+  font-size: 2rem; }
+  @media screen and (min-width: 600px) {
+    h1 {
+      font-size: 5rem; } }
+  @media screen and (max-width: 599px) and (min-width: 480px) {
+    h1 {
+      font-size: 2.5rem; } }
 
 .landing {
   height: 115vh;
@@ -115,14 +132,20 @@ h1 {
   text-align: center;
   width: 100%;
   min-height: 400px;
-  font-size: 3.5rem;
   font-weight: bold;
   background-image: url("/images/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   background-color: #2A3A3F;
-  display: table; }
+  display: table;
+  font-size: 1.5rem; }
+  @media screen and (min-width: 600px) {
+    .landing {
+      font-size: 3.5rem; } }
+  @media screen and (max-width: 599px) and (min-width: 480px) {
+    .landing {
+      font-size: 2.5rem; } }
   .landing:after {
     content: '';
     position: absolute;
@@ -145,7 +168,7 @@ h1 {
     vertical-align: middle;
     z-index: 10;
     position: relative;
-    padding-bottom: 20vh; }
+    padding: 0 5px 20vh; }
   .landing .typewriter .wrap:after {
     border-right: .08em solid #fff;
     animation: cd-pulse 1s infinite;
@@ -155,26 +178,83 @@ h1 {
 .whoami {
   overflow: hidden;
   background-color: #ffffff;
-  padding: 0 50px 20px; }
+  padding: 0 10px 20px; }
+  @media screen and (min-width: 480px) {
+    .whoami {
+      padding: 0 50px 20px; } }
   .whoami .content {
     width: 100%;
     overflow: hidden;
-    text-align: center; }
+    text-align: center;
+    position: relative; }
+    .whoami .content h1 {
+      margin-bottom: 10px; }
     .whoami .content p {
       margin: 10px 0; }
-    .whoami .content .left,
     .whoami .content .right {
-      float: left; }
+      display: inline-block; }
+      @media screen and (min-width: 600px) {
+        .whoami .content .right {
+          padding-left: 20px; } }
+      .whoami .content .right img {
+        height: 200px;
+        width: auto; }
     .whoami .content .left {
-      display: inline-block;
-      width: 25%; }
-      .whoami .content .left img {
-        max-width: 50%; }
-    .whoami .content .right {
-      width: 75%;
-      margin-top: 15px;
+      vertical-align: top;
       display: inline-block;
       text-align: left; }
+      @media screen and (min-width: 600px) {
+        .whoami .content .left {
+          max-width: 325px; } }
+      @media screen and (max-width: 599px) {
+        .whoami .content .left {
+          width: 100%; } }
+    .whoami .content a {
+      position: relative;
+      display: inline-block;
+      text-decoration: none;
+      -webkit-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out;
+      vertical-align: bottom;
+      margin: 0;
+      color: inherit;
+      color: #2A3A3F;
+      font-weight: 700;
+      display: inline-block;
+      overflow: hidden; }
+      .whoami .content a:before {
+        content: '';
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: #2A3A3F;
+        transform: translateX(-100%) translateY(calc(100% - 2px));
+        opacity: 0; }
+      .whoami .content a:after {
+        content: '';
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: #2A3A3F;
+        transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+        transform: translateX(100%) translateY(calc(100% - 2px));
+        opacity: 1; }
+      .whoami .content a:hover:before {
+        transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+        transform: translateX(0%) translateY(calc(100% - 2px));
+        opacity: 1; }
+      .whoami .content a:hover:after {
+        transition: none;
+        transform: translateX(0%) translateY(calc(100% - 2px));
+        opacity: 0; }
 
 .contact {
   text-align: center;
@@ -189,6 +269,6 @@ h1 {
     border-top: 14vh solid #ffffff; }
   .contact .content {
     z-index: 10;
-    padding-top: 14vh; }
+    padding: 14vh 5px 0; }
     .contact .content h1 {
       color: #cccccc; }
