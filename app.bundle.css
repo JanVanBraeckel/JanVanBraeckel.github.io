@@ -203,12 +203,6 @@ h1 {
       vertical-align: top;
       display: inline-block;
       text-align: left; }
-      @media screen and (min-width: 600px) {
-        .whoami .content .left {
-          max-width: 325px; } }
-      @media screen and (max-width: 599px) {
-        .whoami .content .left {
-          width: 100%; } }
     .whoami .content a {
       position: relative;
       display: inline-block;
