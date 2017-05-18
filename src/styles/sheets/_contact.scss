@@ -1,0 +1,23 @@
+.contact {
+  text-align: center;
+  position: relative;
+  background-color: $primary;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-left: 100vw solid $primary;
+    border-top: 14vh solid #ffffff;
+  }
+
+  .content {
+    z-index: 10;
+    padding-top: 14vh;
+
+    h1 {
+      color: darken(#ffffff, 20%);
+    }
+  }
+}

@@ -1,6 +1,16 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+
 html {
   font-family: Roboto, sans-serif;
   font-size: 14px;
-  overflow-x: hidden;
-  color: #4e4e4e;
+  color: $font-primary;
+  background-color: $primary;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 5rem;
+  color: $primary;
 }

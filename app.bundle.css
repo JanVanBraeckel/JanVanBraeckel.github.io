@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);/* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -56,11 +56,58 @@ table {
     transform: translateY(-50%) scale(0);
     opacity: 0; } }
 
+.social-icons {
+  padding: 0;
+  list-style: none;
+  margin: 1rem; }
+  .social-icons li {
+    display: inline-block;
+    margin: .15rem;
+    position: relative;
+    font-size: 1.6rem; }
+  .social-icons i {
+    color: #2A3A3F;
+    position: absolute;
+    top: 19px;
+    left: 19px;
+    transition: all 200ms ease-out; }
+  .social-icons a {
+    display: inline-block; }
+    .social-icons a:before {
+      transform: scale(1);
+      -ms-transform: scale(1);
+      -webkit-transform: scale(1);
+      content: " ";
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+      display: block;
+      background: linear-gradient(45deg, #ffffff, #cccccc);
+      transition: all 200ms ease-out; }
+    .social-icons a:hover:before {
+      transform: scale(0);
+      transition: all 200ms ease-in; }
+    .social-icons a:hover i {
+      transform: scale(1.7);
+      -ms-transform: scale(1.7);
+      -webkit-transform: scale(1.7);
+      color: #ffffff;
+      background: -webkit-linear-gradient(45deg, #ffffff, #cccccc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: all 200ms ease-in; }
+
 html {
   font-family: Roboto, sans-serif;
   font-size: 14px;
-  overflow-x: hidden;
-  color: #4e4e4e; }
+  color: #4e4e4e;
+  background-color: #2A3A3F; }
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 5rem;
+  color: #2A3A3F; }
 
 .landing {
   height: 115vh;
@@ -75,15 +122,13 @@ html {
   background-size: cover;
   background-position: center center;
   background-color: #2A3A3F;
-  display: table;
-  margin: 0 auto; }
+  display: table; }
   .landing:after {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 0;
+    right: 0;
     border-left: 100vw solid #fff;
-    border-right: 50vw solid #fff;
     border-top: 14vh solid transparent; }
   .landing:before {
     position: absolute;
@@ -108,12 +153,9 @@ html {
     width: 1px; }
 
 .whoami {
-  margin: 0 50px;
-  overflow: hidden; }
-  .whoami h1 {
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 5rem; }
+  overflow: hidden;
+  background-color: #ffffff;
+  padding: 0 50px 20px; }
   .whoami .content {
     width: 100%;
     overflow: hidden;
@@ -133,3 +175,20 @@ html {
       margin-top: 15px;
       display: inline-block;
       text-align: left; }
+
+.contact {
+  text-align: center;
+  position: relative;
+  background-color: #2A3A3F; }
+  .contact:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-left: 100vw solid #2A3A3F;
+    border-top: 14vh solid #ffffff; }
+  .contact .content {
+    z-index: 10;
+    padding-top: 14vh; }
+    .contact .content h1 {
+      color: #cccccc; }

@@ -1,0 +1,58 @@
+$timing: 200ms;
+$iconColor: #ffffff;
+$accent: darken($iconColor, 20%);
+@mixin transformScale($size: 1) {
+  transform: scale($size);
+  -ms-transform: scale($size);
+  -webkit-transform: scale($size);
+}
+
+.social-icons {
+  padding: 0;
+  list-style: none;
+  margin: 1rem;
+
+  li {
+    display: inline-block;
+    margin: .15rem;
+    position: relative;
+    font-size: 1.6rem;
+  }
+
+  i {
+    color: $primary;
+    position: absolute;
+    top: 19px;
+    left: 19px;
+    transition: all $timing ease-out;
+  }
+
+  a {
+    display: inline-block;
+
+    &:before {
+      @include transformScale();
+      content: " ";
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+      display: block;
+      background: linear-gradient(45deg, $iconColor, $accent);
+      transition: all $timing ease-out;
+    }
+
+    &:hover:before {
+      transform: scale(0);
+      transition: all $timing ease-in;
+    }
+
+    &:hover i {
+      @include transformScale(1.7);
+      color: $iconColor;
+      background: -webkit-linear-gradient(45deg, $iconColor, $accent);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: all $timing ease-in;
+    }
+  }
+}
