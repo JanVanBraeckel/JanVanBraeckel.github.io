@@ -27,10 +27,12 @@ $accent: darken($iconColor, 20%);
     position: absolute;
     transition: all $timing ease-out;
     top: 6px;
-    left: 6px;
+    left: 0;
+    right: 0;
     @media screen and (min-width: 480px) {
       top: 19px;
-      left: 19px;
+      left: 0;
+      right: 0;
     }
   }
 

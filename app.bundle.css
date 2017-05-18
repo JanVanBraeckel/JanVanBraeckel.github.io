@@ -73,11 +73,13 @@ table {
     position: absolute;
     transition: all 200ms ease-out;
     top: 6px;
-    left: 6px; }
+    left: 0;
+    right: 0; }
     @media screen and (min-width: 480px) {
       .social-icons i {
         top: 19px;
-        left: 19px; } }
+        left: 0;
+        right: 0; } }
   .social-icons a {
     display: inline-block; }
     .social-icons a:before {
