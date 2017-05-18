@@ -99,7 +99,8 @@ html {
     display: table-cell;
     vertical-align: middle;
     z-index: 10;
-    position: relative; }
+    position: relative;
+    padding-bottom: 20vh; }
   .landing .typewriter .wrap:after {
     border-right: .08em solid #fff;
     animation: cd-pulse 1s infinite;
