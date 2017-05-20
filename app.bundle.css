@@ -148,6 +148,9 @@ h1 {
   @media screen and (max-width: 599px) and (min-width: 480px) {
     .landing {
       font-size: 2.5rem; } }
+  .landing i {
+    font-style: normal;
+    color: #a5bcc3; }
   .landing:after {
     content: '';
     position: absolute;

@@ -9,7 +9,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  background-color: #2A3A3F;
+  background-color: $primary;
   display: table;
   font-size: 1.5rem;
   @media screen and (min-width: 600px) {
@@ -17,6 +17,11 @@
   }
   @media screen and (max-width: 599px) and (min-width: 480px) {
     font-size: 2.5rem;
+  }
+
+  i {
+    font-style: normal;
+    color: lighten($primary, 50%);
   }
 
   &:after {
