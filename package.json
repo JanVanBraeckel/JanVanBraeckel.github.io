@@ -27,6 +27,7 @@
     "node-sass": "^4.5.3",
     "postcss-loader": "^2.0.5",
     "sass-loader": "6.0.5",
+    "style-ext-html-webpack-plugin": "^3.4.1",
     "ts-loader": "2.0.3",
     "typescript": "2.3.2",
     "url-loader": "0.5.8",
