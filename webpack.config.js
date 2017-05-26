@@ -10,7 +10,6 @@ const extractSass = new ExtractTextPlugin({
 
 
 var config = {
-  devtool: 'cheap-eval-source-map',
   entry: {
     app: './src/scripts/index.ts'
   },
@@ -34,11 +33,7 @@ var config = {
       {
         test: /\.scss$/,
         use: extractSass.extract({
-          use: [{
-            loader: 'css-loader'
-          }, {
-            loader: 'sass-loader'
-          }],
+          use: ['css-loader?importLoaders=1&url=false', 'postcss-loader', 'sass-loader'],
         })
       }
     ],
@@ -51,11 +46,6 @@ var config = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       inject: 'head',
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: { warnings: false },
-      output: { comments: false },
-      sourceMap: false
     }),
     new webpack.LoaderOptionsPlugin({
       options: {
