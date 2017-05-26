@@ -45,7 +45,7 @@ var config = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      inject: 'head',
+      inject: 'body',
     }),
     new webpack.LoaderOptionsPlugin({
       options: {
