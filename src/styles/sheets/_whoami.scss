@@ -27,7 +27,7 @@
       }
 
       img {
-        height: 200px;
+        height: 300px;
         width: auto;
       }
     }
@@ -42,8 +42,8 @@
       position: relative;
       display: inline-block;
       text-decoration: none;
-      -webkit-transition: all .3s ease-in-out;
-      transition: all .3s ease-in-out;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
       vertical-align: bottom;
       margin: 0;
       color: inherit;
@@ -76,14 +76,14 @@
         height: 100%;
         position: absolute;
         background: $primary;
-        transition: transform .8s cubic-bezier(.19,1,.22,1);
+        transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
         transform: translateX(100%) translateY(calc(100% - 2px));
         opacity: 1;
       }
 
       &:hover {
         &:before {
-          transition: transform .7s cubic-bezier(.19,1,.22,1);
+          transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
           transform: translateX(0%) translateY(calc(100% - 2px));
           opacity: 1;
         }
